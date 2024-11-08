@@ -1,11 +1,11 @@
-import Logo from "../components/Logo";
+import Logo from "../component/Logo";
 import Nav from "./Nav";
 
 
 export default function Header() {
   return (
     <section className="flex justify-between">
-      <Logo/>
+      <Logo />
       <Nav />
     </section>
   )

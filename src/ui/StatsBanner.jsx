@@ -1,4 +1,4 @@
-import { StatCard } from "../components/Card";
+import { StatCard } from "../component/Card";
 import { stats } from "../data/States";
 
 

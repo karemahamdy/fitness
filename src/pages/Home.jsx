@@ -1,7 +1,7 @@
-import SearchForm from "../components/Searchbar";
-import StatsBanner from "../ui/Card";
+import SearchForm from "../component/Searchbar";
 import Header from "../ui/Header";
 import Hero from "../ui/Hero";
+import StatsBanner from "../ui/StatsBanner";
 
 
 
@@ -10,8 +10,8 @@ export default function Home() {
     <div className="container flex flex-col gap-8">
       <Header />
       <Hero />
-      <StatsBanner/>
-      <SearchForm/>
+      <StatsBanner />
+      <SearchForm />
     </div>
   )
 }
