@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="flex justify-between">
       <div className="flex flex-col gap-2">
 
-      <h6 className="text-[50px] font-bold mt-24 mx-8">
+      <h6 className="text-[50px] font-bold mt-24 mx-24">
         Achive Your
         <br/>
         <span className="font-bold text-[#D20C13]">
