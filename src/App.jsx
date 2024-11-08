@@ -1,74 +1,32 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate,
 } from "react-router-dom";
-import './App.css'
 
+import './App.css'
+import Home from "./pages/Home";
+import PageNotFound from "./ui/PageNotFound";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:
-      <Applayout />,
-    children: [
-      {
-        index: true,
-        element: <Navigate replace to="" />,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-      {
-        path: "",
-        element: </>,
-      },
-    ],
+      <Home />,
   },
-  {
-    path: "login",
-    element: <Login />,
-  },
+
   {
     path: "*",
-    element: <PageNotFound />,
+    element: <PageNotFound/>,
   },
 ]);
 
 function App() {
 
   return (
-    <>
-    
+    <>  
         <RouterProvider router={router} />
-    
-      
+     
     </>
   )
 }
