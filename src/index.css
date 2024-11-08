@@ -19,6 +19,7 @@ body {
   background: url("./assets/images/bg.png");
   background-size: cover;
   background-color: black;
+  color: white;
   height: 120vh !important;
 
 }
