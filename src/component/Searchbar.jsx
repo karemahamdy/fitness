@@ -9,14 +9,22 @@ function SearchForm() {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-     console.log(bodyPartsData)
-      setBodyParts(['all', ...bodyPartsData]);
+      try {
+      
+        const bodyPartsData = await fetchData(
+          'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
+          exerciseOptions
+        );
 
+        console.log("Body Parts Data:", bodyPartsData); 
+        setBodyParts(['all', ...bodyPartsData]); 
+      } catch (error) {
+        console.error("Error fetching body parts:", error);
+      }
     };
 
     fetchExercisesData();
-  }, []);
+  }, []); 
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -31,7 +39,6 @@ function SearchForm() {
           || item.bodyPart.toLowerCase().includes(search),
       );
 
-  
 
       setSearch('');
       setExercises(searchedExercises);
@@ -55,7 +62,16 @@ function SearchForm() {
         onClick={handleSearch}
       >
         Search
-      </button>
+        </button>
+        <div className="flex gap-2 text-white">
+          {bodyParts.length > 0 ? (
+            bodyParts.map((item, index) => (
+              <p className="text-white" key={index}>{item}</p>
+            ))
+          ) : (
+            <p className="text-white">Loading body parts...</p>
+          )}
+        </div>
       </div>
           </>
   );
