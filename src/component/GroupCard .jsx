@@ -70,6 +70,7 @@ const WorkoutCarousel = ({ bodyParts }) => {
                 key={index}
                 title={item}
                 isActive={index === currentIndex}
+                
               />
             ))}
           </div>

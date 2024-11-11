@@ -6,6 +6,7 @@ function SearchForm() {
 
   const [search, setSearch] = useState('');
   const [exercises, setExercises] = useState([]);
+  const [filteredExercises, setFilteredExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function SearchForm() {
           || item.bodyPart.toLowerCase().includes(search),
       );
 
-
+      setFilteredExercises(searchedExercises);
       setSearch('');
       setExercises(searchedExercises);
     }
@@ -65,17 +66,19 @@ function SearchForm() {
         Search
         </button>
       </div>
-        {/* <div className="flex gap-2 text-white">
-          {bodyParts.length > 0 ? (
-            bodyParts.map((item, index) => (
-              <p className="text-white" key={index}>{item}</p>
-            ))
-          ) : (
-            <p className="text-white">Loading body parts...</p>
-          )}
-      </div> */}
-      <WorkoutCarousel bodyParts={bodyParts} />
+      <WorkoutCarousel bodyParts={bodyParts} setBodyParts={setBodyParts} />
       
+      <div className="flex flex-wrap gap-4 mt-4">
+    
+        { filteredExercises.map((exercise, index) => (
+            <div key={index} className="p-4 bg-white rounded-md w-[300px] text-center text-red-600">
+              <img src={exercise.gifUrl} alt={exercise.gifUrl} />
+            <h3 className="text-xl font-bold mb-2">{exercise.name}</h3>        
+        
+            </div>
+          ))
+        }
+        </div>
           </>
   );
 }
