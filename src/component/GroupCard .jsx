@@ -19,27 +19,19 @@ const MuscleGroupCard = ({ title, isActive }) => (
   </div>
 );
 
-const WorkoutCarousel = () => {
-  const muscleGroups = [
-    'Abdominals',
-    'Biceps',
-    'Chest',
-    'Back',
-    'Shoulders',
-    'Legs',
-  ];
+const WorkoutCarousel = ({ bodyParts }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? muscleGroups.length - 3 : prev - 1
+      prev === 0 ? bodyParts.length - 3 : prev - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) =>
-      prev === muscleGroups.length - 3 ? 0 : prev + 1
+      prev === bodyParts.length - 3 ? 0 : prev + 1
     );
   };
 
@@ -73,10 +65,10 @@ const WorkoutCarousel = () => {
               transform: `translateX(-${currentIndex * 260}px)`
             }}
           >
-            {muscleGroups.map((group, index) => (
+            {bodyParts.map((item, index) => (
               <MuscleGroupCard
-                key={group}
-                title={group}
+                key={index}
+                title={item}
                 isActive={index === currentIndex}
               />
             ))}

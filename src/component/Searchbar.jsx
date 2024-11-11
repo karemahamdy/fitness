@@ -74,7 +74,7 @@ function SearchForm() {
             <p className="text-white">Loading body parts...</p>
           )}
       </div> */}
-      <WorkoutCarousel/>
+      <WorkoutCarousel bodyParts={bodyParts} />
       
           </>
   );
