@@ -1,22 +1,21 @@
 import  { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import  icon  from "../assets/images/abdominals.png"
 
 const MuscleGroupCard = ({ title, isActive }) => (
 
-  <div className={`relative rounded-lg p-6 min-w-[240px] h-[160px] mr-4 ${isActive ? 'bg-blue-600' : 'bg-gray-800'
+  <div className={`flex  relative rounded-lg p-6 min-w-[25%]  h-[20vh] mr-4 ${isActive ? 'bg-gray-100' : 'bg-gray-800'
     }`}>
     <div className="absolute top-4 left-4">
       <div className="w-12 h-12">
-      
+      <img src={icon} alt="exersice"/>
       </div>
     </div>
     <div className="absolute bottom-4 left-4">
-      <p className="text-sm text-gray-400">workouts for</p>
-      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <p className="text-sm text-orange-400">workouts for</p>
+      <h3 className="text-xl font-bold text-red-600">{title}</h3>
     </div>
-    <button className="absolute bottom-4 right-4 p-2 rounded-full bg-red-500 hover:bg-red-600">
-      <ChevronRight className="w-5 h-5 text-white" />
-    </button>
+  
   </div>
 );
 
@@ -45,7 +44,7 @@ const WorkoutCarousel = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-8 min-h-screen">
+    <div className="p-8">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-white">
@@ -60,7 +59,7 @@ const WorkoutCarousel = () => {
             </button>
             <button
               onClick={handleNext}
-              className="p-2 rounded-full bg-blue-600 hover:bg-blue-700"
+              className="p-2 rounded-full bg-orange-600 hover:bg-orange-700"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
