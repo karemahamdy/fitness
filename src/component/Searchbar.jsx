@@ -1,5 +1,6 @@
 import { exerciseOptions, fetchData } from "../hooks/FetchData";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import WorkoutCarousel from "./GroupCard "
 
 function SearchForm() {
 
@@ -17,7 +18,7 @@ function SearchForm() {
         );
 
         console.log("Body Parts Data:", bodyPartsData); 
-        setBodyParts(['all', ...bodyPartsData]); 
+        setBodyParts([ ...bodyPartsData]); 
       } catch (error) {
         console.error("Error fetching body parts:", error);
       }
@@ -47,7 +48,7 @@ function SearchForm() {
 
   return (
   <>
-      <div className="flex gap-2 mb-3">
+      <div className="flex  gap-2 mb-3">
         <input
           className="w-[350px] lg:w-[1170px] h-[56px] font-bold  border-none focus:border-none rounded-md bg-white text-black px-4 py-2"
           value={search}
@@ -63,7 +64,8 @@ function SearchForm() {
       >
         Search
         </button>
-        <div className="flex gap-2 text-white">
+      </div>
+        {/* <div className="flex gap-2 text-white">
           {bodyParts.length > 0 ? (
             bodyParts.map((item, index) => (
               <p className="text-white" key={index}>{item}</p>
@@ -71,8 +73,9 @@ function SearchForm() {
           ) : (
             <p className="text-white">Loading body parts...</p>
           )}
-        </div>
-      </div>
+      </div> */}
+      <WorkoutCarousel/>
+      
           </>
   );
 }
