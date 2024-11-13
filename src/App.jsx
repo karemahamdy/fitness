@@ -6,6 +6,7 @@ import {
 import './App.css'
 import Home from "./pages/Home";
 import PageNotFound from "./ui/PageNotFound";
+import ExerciseDetail from "./ui/ExersiscesDetails";
 
 
 const router = createBrowserRouter([
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
     element:
       <Home/>,
   },
+  {
 
+    path: "/exercise/:id",
+    element: <ExerciseDetail/>
+  },
   {
     path: "*",
     element: <PageNotFound/>,
