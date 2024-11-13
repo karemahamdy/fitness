@@ -1,5 +1,4 @@
 export const exerciseOptions = {
-   url : 'https://exercisedb.p.rapidapi.com/exercises?offset=0',
     method: 'GET',
     headers: {
       'x-rapidapi-key': 'a603b9f7edmsh45414b984ba4698p17919cjsn4f3fd0e587d5',
