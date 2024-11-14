@@ -29,12 +29,12 @@ const ExerciseDetail = () => {
   }, [id]);
 
   return (
-    <div className="min-h-screen bg-gray-900 p-4">
-      <div className="max-w-3xl mx-auto">
-        {/* Header */}
+    <div className="pt-16">
+      <div className="max-w-3xl mx-16">
+      
         <div className="mb-4">
           <button
-            className="flex items-center text-blue-500 hover:text-blue-400"
+            className="flex items-center text-red-400 hover:text-red-600"
             onClick={() => navigate(-1)}
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -43,8 +43,8 @@ const ExerciseDetail = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-4">
-          {/* Left Column - Exercise Image */}
-          <div className="bg-blue-600 p-6 rounded-lg">
+        
+          <div className="bg-orange-600 p-6 rounded-lg">
             <h2 className="text-white text-xl font-bold mb-4">{name || 'Loading...'}</h2>
             <div className="bg-white p-4 rounded-lg mb-4">
               {gifUrl ? <img src={gifUrl} alt={name} /> : <p>Loading image...</p>}
@@ -65,14 +65,18 @@ const ExerciseDetail = () => {
           <div className="bg-gray-900 p-6 rounded-lg">
             <h2 className="text-white text-xl font-bold mb-4">Instructions</h2>
             <ol className="space-y-4">
-              {instructions.map((instruction, index) => (
-                <li key={index} className="flex gap-4 text-white">
-                  <span className="flex-shrink-0 w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
-                    {index + 1}
-                  </span>
-                  <span>{instruction}</span>
-                </li>
-              ))}
+              {instructions ? (
+                instructions.map((instruction, index) => (
+                  <li key={index} className="flex gap-4 text-white">
+                    <span className="flex-shrink-0 w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
+                      {index + 1}
+                    </span>
+                    <span>{instruction}</span>
+                  </li>
+                ))
+              ) : (
+                <p>no data here</p>
+              )}
             </ol>
           </div>
         
