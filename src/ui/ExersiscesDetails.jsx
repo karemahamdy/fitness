@@ -18,7 +18,7 @@ const ExerciseDetail = () => {
           `${exerciseDbUrl}/exercises/exercise/${id}`,
           exerciseOptions
         );
-        setExerciseDetail(exerciseDetailData); 
+        setExerciseDetail(exerciseDetailData);
         console.log(exerciseDetailData)
       } catch (error) {
         console.error("Error fetching exercise details:", error);
@@ -30,21 +30,23 @@ const ExerciseDetail = () => {
 
   return (
     <div className="pt-16">
-      <div className="max-w-3xl mx-16">
-      
-        <div className="mb-4">
-          <button
-            className="flex items-center text-red-400 hover:text-red-600"
-            onClick={() => navigate(-1)}
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
-          </button>
-        </div>
+      <div className="max-w-4xl mx-auto p-4">
+
 
         <div className="grid md:grid-cols-2 gap-4">
-        
+
           <div className="bg-orange-600 p-6 rounded-lg">
+
+            <div className="mb-4">
+              <button
+                className="flex items-center text-white"
+                onClick={() => navigate(-1)}
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Go Back
+              </button>
+            </div>
+
             <h2 className="text-white text-xl font-bold mb-4">{name || 'Loading...'}</h2>
             <div className="bg-white p-4 rounded-lg mb-4">
               {gifUrl ? <img src={gifUrl} alt={name} /> : <p>Loading image...</p>}
@@ -56,10 +58,10 @@ const ExerciseDetail = () => {
               <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
                 {equipment || 'Loading...'}
               </span>
+            <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
+              {target}
+            </span>
             </div>
-              <span className=" text-white px-3 py-1  text-sm">
-                {target }
-              </span>
           </div>
 
           <div className="bg-gray-900 p-6 rounded-lg">
@@ -75,12 +77,12 @@ const ExerciseDetail = () => {
                   </li>
                 ))
               ) : (
-                <p>no data here</p>
+                <p>No data here</p>
               )}
             </ol>
           </div>
-        
-        
+
+
         </div>
       </div>
     </div>
