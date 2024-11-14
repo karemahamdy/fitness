@@ -1,3 +1,4 @@
+import PricingPlans from "../ui/PricingPlans";
 import SearchForm from "../component/Searchbar";
 import Header from "../ui/Header";
 import Hero from "../ui/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <StatsBanner />
       <SearchForm />
+      <PricingPlans/>
     </div>
   )
 }
