@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { exerciseOptions, fetchData } from '../hooks/FetchData';
+import { exerciseOptions, fetchData } from '../helper/FetchData';
 
 const ExerciseDetail = () => {
   const navigate = useNavigate();
@@ -58,9 +58,9 @@ const ExerciseDetail = () => {
               <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
                 {equipment || 'Loading...'}
               </span>
-            <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
-              {target}
-            </span>
+              <span className="bg-white text-black px-3 py-1 rounded-full text-sm">
+                {target}
+              </span>
             </div>
           </div>
 
