@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { exerciseOptions, fetchData } from "../helper/FetchData";
 import WorkoutCarousel from "./GroupCard ";
+import Loader from "../ui/Loader";
 
 function SearchForm() {
 
@@ -32,6 +33,7 @@ function SearchForm() {
   const handleSearch = async (e) => {
     e.preventDefault();
     if (search) {
+
       const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=9&offset=0', exerciseOptions);
       console.log(exercisesData)
 
@@ -70,6 +72,7 @@ function SearchForm() {
       <WorkoutCarousel bodyParts={bodyParts} setBodyParts={setBodyParts} />
 
       <div className="flex flex-wrap gap-4 mt-4">
+    
         {filteredExercises.map((exercise, index) => (
           <>
             <Link className="exercise-card" to={`/exercise/${exercise.id}`}>

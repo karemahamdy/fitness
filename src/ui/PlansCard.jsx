@@ -4,7 +4,8 @@ export default function PlansCard() {
   return (
 
     <div className="grid md:grid-cols-3 gap-8">
-      {Plans.map((plan, index) => (
+
+      {Plans.map((plan) => (
         <div
           key={plan.name}
           className="relative  rounded-lg p-8 border border-orange-700  flex flex-col h-full"
