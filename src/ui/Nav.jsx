@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import PricingPlans from "./PricingPlans";
 
 
 export default function Nav() {
@@ -19,9 +20,9 @@ export default function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className="list-style">
-            Contact
-          </NavLink>
+          <Link id="plans"className="list-style">
+            Plans
+          </Link>
         </li>
       </ul>
     </nav>

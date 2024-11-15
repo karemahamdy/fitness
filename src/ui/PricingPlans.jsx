@@ -51,7 +51,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <div className="container">
+    <setion className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-2">
             Our <span className="text-red-600">Plans</span>
@@ -115,7 +115,7 @@ const PricingPlans = () => {
             </div>
           ))}
         </div>
-      </div>
+      </setion>
   
   );
 };

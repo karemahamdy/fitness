@@ -7,6 +7,7 @@ import './App.css'
 import Home from "./pages/Home";
 import PageNotFound from "./ui/PageNotFound";
 import ExerciseDetail from "./ui/ExersiscesDetails";
+import PricingPlans from "./ui/PricingPlans";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "/exercise/:id",
     element: <ExerciseDetail/>
   },
+  // {
+  //   path: "/plan",
+  //   element: <PricingPlans/>
+  // },
   {
     path: "*",
     element: <PageNotFound/>,
