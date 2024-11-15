@@ -32,7 +32,7 @@ function SearchForm() {
   const handleSearch = async (e) => {
     e.preventDefault();
     if (search) {
-      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=250&offset=0', exerciseOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=9&offset=0', exerciseOptions);
       console.log(exercisesData)
 
       const searchedExercises = exercisesData.filter(

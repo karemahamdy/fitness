@@ -21,10 +21,6 @@ const router = createBrowserRouter([
     path: "/exercise/:id",
     element: <ExerciseDetail/>
   },
-  // {
-  //   path: "/plan",
-  //   element: <PricingPlans/>
-  // },
   {
     path: "*",
     element: <PageNotFound/>,

@@ -36,7 +36,7 @@ const WorkoutCarousel = ({ bodyParts }) => {
   };
 
   return (
-    <div className="p-8">
+    <section id="exercises" className="p-8">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold text-white">
@@ -76,7 +76,7 @@ const WorkoutCarousel = ({ bodyParts }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,17 +10,17 @@ export default function Nav() {
           <NavLink exact to="/" className="list-style">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about"
+          <Link to="contact"
             smooth={true}
             duration={1}
             className="list-style">
-            About
-          </NavLink>
+            contact
+          </Link>
         </li>
         <li>
-          <NavLink to="/exercises" className="list-style">
+          <Link to="exercises" className="list-style">
             Exercises
-          </NavLink>
+          </Link>
         </li>
         <li>
           <Link to="plans"
