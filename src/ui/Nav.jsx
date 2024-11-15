@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
-import PricingPlans from "./PricingPlans";
+import {   NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 
 export default function Nav() {
@@ -10,7 +10,10 @@ export default function Nav() {
           <NavLink exact to="/" className="list-style">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about" className="list-style">
+          <NavLink to="/about"
+            smooth={true}
+            duration={1}
+            className="list-style">
             About
           </NavLink>
         </li>
@@ -20,7 +23,10 @@ export default function Nav() {
           </NavLink>
         </li>
         <li>
-          <Link id="plans"className="list-style">
+          <Link to="plans"
+            smooth={true}
+            duration={1}
+            className="list-style">
             Plans
           </Link>
         </li>

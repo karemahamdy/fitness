@@ -51,7 +51,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <setion className="container">
+    <setion className="container" id="plans">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-2">
             Our <span className="text-red-600">Plans</span>
