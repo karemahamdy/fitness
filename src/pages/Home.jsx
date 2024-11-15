@@ -5,8 +5,6 @@ import Hero from "../ui/Hero";
 import StatsBanner from "../ui/StatsBanner";
 import Footer from "../ui/Footer";
 
-
-
 export default function Home() {
   return (
     <div className="container flex flex-col gap-8">

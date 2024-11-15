@@ -1,8 +1,5 @@
 import NavLinks from "../component/NavLinks";
 
-
-
-
 export default function Nav() {
   return (
     <nav>
