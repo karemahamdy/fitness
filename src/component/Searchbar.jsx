@@ -3,32 +3,15 @@ import { Link } from "react-router-dom";
 import { exerciseOptions, fetchData } from "../helper/FetchData";
 import WorkoutCarousel from "./GroupCard ";
 import Loader from "../ui/Loader";
+import Button from "./Button";
+import Exersisces from "../ui/Exersisces";
 
 function SearchForm() {
 
   const [search, setSearch] = useState('');
   const [exercises, setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
-  const [bodyParts, setBodyParts] = useState([]);
 
-  useEffect(() => {
-    const fetchExercisesData = async () => {
-      try {
-
-        const bodyPartsData = await fetchData(
-          'https://exercisedb.p.rapidapi.com/exercises/bodyPartList?limit=250',
-          exerciseOptions
-        );
-
-        console.log("Body Parts Data:", bodyPartsData);
-        setBodyParts([...bodyPartsData]);
-      } catch (error) {
-        console.error("Error fetching body parts:", error);
-      }
-    };
-
-    fetchExercisesData();
-  }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -60,17 +43,12 @@ function SearchForm() {
           placeholder="Search Exercises"
           type="text"
         />
+        <Button bg="bg-[#FF2625]" rounded="rounded-md" onClick={handleSearch}>Search</Button>
 
-
-        <button
-          className="bg-[#FF2625] text-white font-normal h-[56px] w-[80px] lg:w-[173px] text-[14px] lg:text-[20px] rounded-md"
-          onClick={handleSearch}
-        >
-          Search
-        </button>
       </div>
-      <WorkoutCarousel bodyParts={bodyParts} setBodyParts={setBodyParts} />
 
+      <Exersisces/>
+      
       <div className="flex flex-wrap gap-4 mt-4">
     
         {filteredExercises.map((exercise, index) => (
