@@ -1,5 +1,4 @@
 import { SearchedExercises } from "../ui/SearchExercise";
-import SearchForm from "../component/Searchbar";
 import Footer from "../ui/Footer";
 import Header from "../ui/Header";
 import Hero from "../ui/Hero";
@@ -12,7 +11,6 @@ export default function Home() {
       <Header />
       <Hero />
       <StatsBanner />
-      {/* <SearchForm /> */}
       <SearchedExercises/>
       <PricingPlans />
       <Footer />

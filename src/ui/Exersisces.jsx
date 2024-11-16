@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import WorkoutCarousel from "../component/GroupCard ";
 import { exerciseOptions, fetchData } from "../helper/FetchData";
 
-
 export default function Exersisces() {
-
+  
   const [bodyParts, setBodyParts] = useState([]);
   useEffect(() => {
     const fetchExercisesData = async () => {
