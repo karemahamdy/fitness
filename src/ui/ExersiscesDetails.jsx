@@ -33,9 +33,10 @@ const ExerciseDetail = () => {
       <div className="max-w-4xl mx-auto p-4">
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-orange-600 p-6 rounded-lg">
-            
+
             <div className="mb-4">
               <button
+                aria-label="navigate-back"
                 className="flex items-center text-white"
                 onClick={() => navigate(-1)}
               >

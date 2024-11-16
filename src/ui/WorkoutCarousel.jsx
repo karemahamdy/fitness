@@ -27,12 +27,16 @@ const WorkoutCarousel = ({ bodyParts }) => {
           </h2>
           <div className="flex gap-2">
             <button
+              type='button'
+              aria-label="Previous"
               onClick={handlePrevious}
               className="p-2 rounded-full bg-gray-800 hover:bg-gray-700"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
             <button
+              type='button'
+              aria-label="Next"
               onClick={handleNext}
               className="p-2 rounded-full bg-orange-600 hover:bg-orange-700"
             >

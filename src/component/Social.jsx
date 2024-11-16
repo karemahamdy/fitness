@@ -17,16 +17,16 @@ export default function Social() {
         Join our community and achieve your health goals today.
       </p>
       <div className="flex space-x-4">
-        <Link className="hover:text-red-500 transition-colors">
+        <Link className="hover:text-red-500 transition-colors" aria-label="Facebook">
           <Facebook className="w-6 h-6" />
         </Link>
-        <Link className="hover:text-red-500 transition-colors">
+        <Link className="hover:text-red-500 transition-colors" aria-label="Twitter">
           <Twitter className="w-6 h-6" />
         </Link>
-        <Link className="hover:text-red-500 transition-colors">
+        <Link className="hover:text-red-500 transition-colors" aria-label="Instagram">
           <Instagram className="w-6 h-6" />
         </Link>
-        <Link className="hover:text-red-500 transition-colors">
+        <Link className="hover:text-red-500 transition-colors" aria-label="Youtube">
           <Youtube className="w-6 h-6" />
         </Link>
       </div>
