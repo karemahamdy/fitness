@@ -6,7 +6,7 @@ import SearchForm from "../component/Searchbar";
 
 export function SearchedExercises() {
   const [search, setSearch] = useState('');
-  const [exercises, setExercises] = useState([]);
+  const [ setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
 
   const handleSearch = async (e) => {
