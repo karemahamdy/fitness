@@ -1,9 +1,9 @@
-import PricingPlans from "../ui/PricingPlans";
 import SearchForm from "../component/Searchbar";
+import Footer from "../ui/Footer";
 import Header from "../ui/Header";
 import Hero from "../ui/Hero";
+import PricingPlans from "../ui/PricingPlans";
 import StatsBanner from "../ui/StatsBanner";
-import Footer from "../ui/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <StatsBanner />
       <SearchForm />
       <PricingPlans />
-      <Footer/>
+      <Footer />
     </div>
   )
 }
