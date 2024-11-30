@@ -16,11 +16,14 @@ export default function NavLinks() {
         </Link>
       </li>
       <li>
+
         <Link to="exercises" className="list-style">
           Exercises
         </Link>
       </li>
+      
       <li>
+
         <Link to="plans"
           smooth={true}
           duration={1}
